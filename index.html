@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TWINT THE BIRTHDAY GIRL</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: #ff4fa3;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      text-align: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 430px;
+      background: white;
+      padding: 40px 25px;
+      border: 4px solid #111;
+      border-radius: 25px;
+      box-shadow: 8px 8px 0 #111;
+    }
+
+    .stars {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 0.95;
+      margin: 0 0 15px;
+      font-weight: 900;
+    }
+
+    .pink {
+      color: #ff2d91;
+    }
+
+    .subtitle {
+      font-size: 21px;
+      font-weight: 900;
+      margin-bottom: 35px;
+    }
+
+    .question {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .twint-button {
+      width: 100%;
+      padding: 18px 20px;
+      border: 0;
+      border-radius: 50px;
+      background: #111;
+      color: white;
+      font-size: 23px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    #twintInfo {
+      display: none;
+      margin-top: 30px;
+      padding-top: 25px;
+      border-top: 2px dashed #111;
+    }
+
+    .label {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .number {
+      font-size: 28px;
+      font-weight: 900;
+      margin: 10px 0 18px;
+    }
+
+    .copy-button {
+      padding: 14px 22px;
+      border: 2px solid #111;
+      border-radius: 50px;
+      background: #ff4fa3;
+      color: #111;
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .instructions {
+      margin-top: 25px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    #copied {
+      display: none;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="stars">✦ ✦ ✦</div>
+
+    <h1>
+      TWINT THE<br>
+      <span class="pink">BIRTHDAY GIRL</span>
+    </h1>
+
+    <div class="subtitle">
+      28 & STILL EXPENSIVE 💅
+    </div>
+
+    <div class="question">
+      Feeling generous? 💸
+    </div>
+
+    <button class="twint-button" onclick="showTwint()">
+      💸 TWINT ME
+    </button>
+
+    <div id="twintInfo">
+
+      <div class="label">
+        Send your TWINT to:
+      </div>
+
+      <div class="number" id="number">
+        079 625 09 20
+      </div>
+
+      <button class="copy-button" onclick="copyNumber()">
+        📋 NUMMER KOPIEREN
+      </button>
+
+      <div id="copied">
+        ✓ Kopiert! Open TWINT 💕
+      </div>
+
+      <div class="instructions">
+        Open TWINT → Send money → paste number<br>
+        → choose your amount ✨
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    function showTwint() {
+      document.getElementById("twintInfo").style.display = "block";
+    }
+
+    function copyNumber() {
+      const number = document
+        .getElementById("number")
+        .innerText
+        .replace(/\s/g, "");
+
+      navigator.clipboard.writeText(number).then(function() {
+        document.getElementById("copied").style.display = "block";
+      });
+    }
+  </script>
+
+</body>
+</html>
