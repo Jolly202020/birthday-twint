@@ -17,101 +17,131 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px;
-      background: #ff4fa3;
+      padding: 22px;
+      background: #f45aa5;
       font-family: Arial, Helvetica, sans-serif;
-      color: #111;
+      color: #171717;
       text-align: center;
     }
 
     .card {
       width: 100%;
       max-width: 430px;
-      background: white;
-      padding: 40px 25px;
-      border: 4px solid #111;
-      border-radius: 25px;
-      box-shadow: 8px 8px 0 #111;
+      background: #ffffff;
+      padding: 38px 25px 34px;
+      border: 3px solid #171717;
+      border-radius: 24px;
+      box-shadow: 7px 7px 0 #171717;
     }
 
     .stars {
-      font-size: 28px;
-      margin-bottom: 10px;
+      font-size: 24px;
+      letter-spacing: 6px;
+      margin-bottom: 15px;
     }
 
     h1 {
-      font-size: 40px;
-      line-height: 0.95;
-      margin: 0 0 15px;
+      font-size: 39px;
+      line-height: 0.98;
+      margin: 0 0 14px;
       font-weight: 900;
+      letter-spacing: -1px;
     }
 
     .pink {
-      color: #ff2d91;
+      color: #e9358d;
     }
 
     .subtitle {
-      font-size: 21px;
-      font-weight: 900;
-      margin-bottom: 35px;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 32px;
     }
 
     .question {
       font-size: 18px;
-      margin-bottom: 20px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+
+    .question strong {
+      font-size: 19px;
     }
 
     .twint-button {
       width: 100%;
       padding: 18px 20px;
-      border: 0;
+      border: none;
       border-radius: 50px;
-      background: #111;
-      color: white;
-      font-size: 23px;
+      background: #171717;
+      color: #ffffff;
+      font-size: 22px;
       font-weight: 900;
       cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    .twint-button:active {
+      transform: scale(0.97);
     }
 
     #twintInfo {
       display: none;
       margin-top: 30px;
-      padding-top: 25px;
-      border-top: 2px dashed #111;
+      padding-top: 27px;
+      border-top: 2px dashed #d9d9d9;
     }
 
     .label {
-      font-size: 15px;
-      margin-bottom: 5px;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
     .number {
-      font-size: 28px;
+      font-size: 27px;
       font-weight: 900;
-      margin: 10px 0 18px;
+      margin: 12px 0 18px;
+      letter-spacing: 1px;
     }
 
     .copy-button {
       padding: 14px 22px;
-      border: 2px solid #111;
+      border: 2px solid #171717;
       border-radius: 50px;
-      background: #ff4fa3;
-      color: #111;
-      font-size: 16px;
+      background: #f45aa5;
+      color: #171717;
+      font-size: 15px;
       font-weight: 900;
       cursor: pointer;
     }
 
-    .instructions {
-      margin-top: 25px;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
     #copied {
       display: none;
-      margin-top: 12px;
-      font-weight: bold;
+      margin-top: 14px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .thankyou {
+      margin-top: 27px;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .instructions {
+      margin-top: 17px;
+      padding: 15px;
+      background: #fff3f8;
+      border-radius: 15px;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .footer {
+      margin-top: 23px;
+      font-size: 12px;
+      color: #777;
     }
   </style>
 </head>
@@ -120,7 +150,9 @@
 
   <div class="card">
 
-    <div class="stars">✦ ✦ ✦</div>
+    <div class="stars">
+      ✦ ✦ ✦
+    </div>
 
     <h1>
       TWINT THE<br>
@@ -128,22 +160,35 @@
     </h1>
 
     <div class="subtitle">
-      28 & STILL EXPENSIVE 💅
+      28 &amp; STILL EXPENSIVE 💕
     </div>
 
     <div class="question">
-      Feeling generous? 💸
+      <strong>
+        Du möchtest mir eine kleine<br>
+        Geburtstagsfreude machen?
+      </strong>
+
+      <br><br>
+
+      Dann darfst du mein Geburtstagskässeli<br>
+      gerne ein bisschen füttern. 🐷💕
     </div>
 
     <button class="twint-button" onclick="showTwint()">
       💸 TWINT ME
     </button>
 
+
+    <!-- Dieser Bereich erscheint erst nach Klick auf TWINT ME -->
+
     <div id="twintInfo">
 
       <div class="label">
-        Send your TWINT to:
+        Fürs Geburtstagskässeli 🎂
       </div>
+
+      <!-- HIER DEINE ECHTE TWINT-NUMMER EINTRAGEN -->
 
       <div class="number" id="number">
         079 625 09 20
@@ -154,33 +199,52 @@
       </button>
 
       <div id="copied">
-        ✓ Kopiert! Open TWINT 💕
+        ✓ Nummer kopiert! 💕
+      </div>
+
+      <div class="thankyou">
+        Danke von Herzen! 🫶
       </div>
 
       <div class="instructions">
-        Open TWINT → Send money → paste number<br>
-        → choose your amount ✨
+        TWINT öffnen → Geld senden<br>
+        → Nummer einfügen → Betrag wählen ✨
       </div>
 
     </div>
 
   </div>
 
+
   <script>
+
     function showTwint() {
       document.getElementById("twintInfo").style.display = "block";
+
+      setTimeout(function() {
+        document.getElementById("twintInfo").scrollIntoView({
+          behavior: "smooth",
+          block: "nearest"
+        });
+      }, 100);
     }
 
+
     function copyNumber() {
+
       const number = document
         .getElementById("number")
         .innerText
         .replace(/\s/g, "");
 
       navigator.clipboard.writeText(number).then(function() {
+
         document.getElementById("copied").style.display = "block";
+
       });
+
     }
+
   </script>
 
 </body>
