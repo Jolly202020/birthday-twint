@@ -55,17 +55,47 @@
     .subtitle {
       font-size: 20px;
       font-weight: 800;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
 
-    .question {
-      font-size: 18px;
-      line-height: 1.5;
-      margin-bottom: 25px;
-    }
-
-    .question strong {
+    .sunice {
       font-size: 19px;
+      line-height: 1.35;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .could {
+      font-size: 19px;
+      font-weight: 900;
+      font-style: italic;
+      margin: 14px 0 30px;
+    }
+
+    .message {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .birthday-drink {
+      display: block;
+      margin: 8px 0 17px;
+      font-size: 20px;
+      font-weight: 900;
+      color: #e9358d;
+    }
+
+    .cheers-together {
+      font-size: 17px;
+      line-height: 1.5;
+      margin-bottom: 27px;
     }
 
     .twint-button {
@@ -75,7 +105,7 @@
       border-radius: 50px;
       background: #171717;
       color: #ffffff;
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 900;
       cursor: pointer;
       transition: transform 0.15s ease;
@@ -92,16 +122,10 @@
       border-top: 2px dashed #d9d9d9;
     }
 
-    .label {
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
     .number {
       font-size: 27px;
       font-weight: 900;
-      margin: 12px 0 18px;
+      margin: 3px 0 18px;
       letter-spacing: 1px;
     }
 
@@ -114,6 +138,11 @@
       font-size: 15px;
       font-weight: 900;
       cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    .copy-button:active {
+      transform: scale(0.97);
     }
 
     #copied {
@@ -124,24 +153,17 @@
     }
 
     .thankyou {
-      margin-top: 27px;
-      font-size: 18px;
-      font-weight: 800;
+      margin-top: 28px;
+      font-size: 19px;
+      font-weight: 900;
     }
 
-    .instructions {
-      margin-top: 17px;
-      padding: 15px;
-      background: #fff3f8;
-      border-radius: 15px;
-      font-size: 13px;
-      line-height: 1.7;
-    }
-
-    .footer {
-      margin-top: 23px;
-      font-size: 12px;
-      color: #777;
+    .signature {
+      margin-top: 13px;
+      font-size: 23px;
+      font-weight: 700;
+      font-style: italic;
+      color: #e9358d;
     }
   </style>
 </head>
@@ -163,35 +185,40 @@
       28 &amp; STILL EXPENSIVE 💕
     </div>
 
-    <div class="question">
-      <strong>
-        Du möchtest mir eine kleine<br>
-        Geburtstagsfreude machen?
-      </strong>
+    <div class="sunice">
+      Birthday vibes @ SunIce Ascona 2026 ☀️🥂
+    </div>
 
-      <br><br>
+    <div class="intro">
+      Geburtstag, SunIce, gute Musik<br>
+      und meine Lieblingsmenschen um mich herum –
+    </div>
 
-      Dann darfst du mein Geburtstagskässeli<br>
-      gerne ein bisschen füttern. 🐷💕
+    <div class="could">
+      could be worse. ✨
+    </div>
+
+    <div class="message">
+      Wenn du mir eine kleine Freude machen möchtest,<br>
+      darfst du mir gerne einen
+
+      <span class="birthday-drink">
+        Birthday-Drink ausgeben. 🍹💕
+      </span>
+    </div>
+
+    <div class="cheers-together">
+      Vielleicht stossen wir sogar gemeinsam darauf an. 🫶
     </div>
 
     <button class="twint-button" onclick="showTwint()">
-      💸 TWINT ME
+      💸 TWINT ME A DRINK
     </button>
-
-
-    <!-- Dieser Bereich erscheint erst nach Klick auf TWINT ME -->
 
     <div id="twintInfo">
 
-      <div class="label">
-        Fürs Geburtstagskässeli 🎂
-      </div>
-
-      <!-- HIER DEINE ECHTE TWINT-NUMMER EINTRAGEN -->
-
       <div class="number" id="number">
-        079 625 09 20
+        07X XXX XX XX
       </div>
 
       <button class="copy-button" onclick="copyNumber()">
@@ -203,46 +230,41 @@
       </div>
 
       <div class="thankyou">
-        Danke von Herzen! 🫶
+        Thank you &amp; cheers! 🥂💕
       </div>
 
-      <div class="instructions">
-        TWINT öffnen → Geld senden<br>
-        → Nummer einfügen → Betrag wählen ✨
+      <div class="signature">
+        Jolly
       </div>
 
     </div>
 
   </div>
 
-
   <script>
 
     function showTwint() {
-      document.getElementById("twintInfo").style.display = "block";
+      const info = document.getElementById("twintInfo");
+
+      info.style.display = "block";
 
       setTimeout(function() {
-        document.getElementById("twintInfo").scrollIntoView({
+        info.scrollIntoView({
           behavior: "smooth",
           block: "nearest"
         });
       }, 100);
     }
 
-
     function copyNumber() {
-
       const number = document
         .getElementById("number")
         .innerText
         .replace(/\s/g, "");
 
       navigator.clipboard.writeText(number).then(function() {
-
         document.getElementById("copied").style.display = "block";
-
       });
-
     }
 
   </script>
