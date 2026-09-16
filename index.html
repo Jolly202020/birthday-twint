@@ -28,16 +28,24 @@
       width: 100%;
       max-width: 430px;
       background: #ffffff;
-      padding: 38px 25px 34px;
+      padding: 36px 25px 34px;
       border: 3px solid #171717;
       border-radius: 24px;
       box-shadow: 7px 7px 0 #171717;
     }
 
-    .stars {
-      font-size: 24px;
-      letter-spacing: 6px;
-      margin-bottom: 15px;
+    .spotted {
+      font-size: 17px;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .edition {
+      font-size: 13px;
+      font-style: italic;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      margin-bottom: 27px;
     }
 
     h1 {
@@ -54,48 +62,53 @@
 
     .subtitle {
       font-size: 20px;
-      font-weight: 800;
-      margin-bottom: 28px;
-    }
-
-    .sunice {
-      font-size: 19px;
-      line-height: 1.35;
       font-weight: 900;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     .intro {
       font-size: 17px;
       line-height: 1.6;
-      margin-bottom: 12px;
+      margin-bottom: 18px;
     }
 
-    .could {
-      font-size: 19px;
+    .sunice-line {
+      font-size: 18px;
+      font-weight: 800;
+      margin: 20px 0 12px;
+    }
+
+    .magic {
+      font-size: 18px;
       font-weight: 900;
-      font-style: italic;
-      margin: 14px 0 30px;
+      margin: 16px 0 20px;
+    }
+
+    .date {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 900;
+      padding: 10px 17px;
+      margin-bottom: 27px;
+      border: 2px solid #171717;
+      border-radius: 50px;
     }
 
     .message {
       font-size: 17px;
       line-height: 1.6;
-      margin-bottom: 18px;
+      margin-bottom: 10px;
     }
 
-    .birthday-drink {
-      display: block;
-      margin: 8px 0 17px;
-      font-size: 20px;
+    .birthday-moment {
       font-weight: 900;
       color: #e9358d;
     }
 
-    .cheers-together {
-      font-size: 17px;
-      line-height: 1.5;
-      margin-bottom: 27px;
+    .memories {
+      font-size: 19px;
+      font-weight: 900;
+      margin: 18px 0 27px;
     }
 
     .twint-button {
@@ -117,7 +130,7 @@
 
     #twintInfo {
       display: none;
-      margin-top: 30px;
+      margin-top: 29px;
       padding-top: 27px;
       border-top: 2px dashed #d9d9d9;
     }
@@ -152,17 +165,22 @@
       font-weight: 700;
     }
 
+    .cheers {
+      margin-top: 29px;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
     .thankyou {
-      margin-top: 28px;
-      font-size: 19px;
-      font-weight: 900;
+      margin-top: 23px;
+      font-size: 16px;
+      font-style: italic;
     }
 
     .signature {
-      margin-top: 13px;
-      font-size: 23px;
-      font-weight: 700;
-      font-style: italic;
+      margin-top: 11px;
+      font-size: 24px;
+      font-weight: 900;
       color: #e9358d;
     }
   </style>
@@ -172,8 +190,12 @@
 
   <div class="card">
 
-    <div class="stars">
-      ✦ ✦ ✦
+    <div class="spotted">
+      Birthday girl spotted. ✨
+    </div>
+
+    <div class="edition">
+      SUNICE ASCONA 2026 · BIRTHDAY EDITION
     </div>
 
     <h1>
@@ -185,30 +207,34 @@
       28 &amp; STILL EXPENSIVE 💕
     </div>
 
-    <div class="sunice">
-      Birthday vibes @ SunIce Ascona 2026 ☀️🥂
-    </div>
-
     <div class="intro">
-      Geburtstag, SunIce, gute Musik<br>
-      und meine Lieblingsmenschen um mich herum –
+      Ich könnte mir kaum einen schöneren Ort vorstellen,<br>
+      um in meinen Geburtstag reinzufeiern:
     </div>
 
-    <div class="could">
-      could be worse. ✨
+    <div class="sunice-line">
+      SunIce. Musik. Lieblingsmenschen.
+    </div>
+
+    <div class="magic">
+      And a little bit of magic after midnight. ✨
+    </div>
+
+    <div class="date">
+      20.09. · Cheers to 28. 🥂
     </div>
 
     <div class="message">
-      Wenn du mir eine kleine Freude machen möchtest,<br>
-      darfst du mir gerne einen
-
-      <span class="birthday-drink">
-        Birthday-Drink ausgeben. 🍹💕
+      Falls du diesem Abend spontan noch einen<br>
+      kleinen
+      <span class="birthday-moment">
+        Birthday-Drink-Moment
       </span>
+      hinzufügen möchtest:
     </div>
 
-    <div class="cheers-together">
-      Vielleicht stossen wir sogar gemeinsam darauf an. 🫶
+    <div class="memories">
+      this one’s for the memories. 🍹💕
     </div>
 
     <button class="twint-button" onclick="showTwint()">
@@ -218,7 +244,7 @@
     <div id="twintInfo">
 
       <div class="number" id="number">
-        07X XXX XX XX
+        079 625 09 20
       </div>
 
       <button class="copy-button" onclick="copyNumber()">
@@ -229,8 +255,13 @@
         ✓ Nummer kopiert! 💕
       </div>
 
+      <div class="cheers">
+        Und wer weiss – vielleicht wird aus dem TWINT<br>
+        später noch ein echtes Cheers am SunIce. 🫶
+      </div>
+
       <div class="thankyou">
-        Thank you &amp; cheers! 🥂💕
+        Thank you for being a little part of it.
       </div>
 
       <div class="signature">
@@ -242,7 +273,6 @@
   </div>
 
   <script>
-
     function showTwint() {
       const info = document.getElementById("twintInfo");
 
@@ -266,7 +296,6 @@
         document.getElementById("copied").style.display = "block";
       });
     }
-
   </script>
 
 </body>
